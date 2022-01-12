@@ -1,0 +1,12 @@
+//        function for check if there is any same value between two differents arrays
+
+        int[] arrFirst = {1,2,3};
+        int[] arrSecond = {1,1,4,5,2};
+
+        for (int resultFirst:arrFirst) {
+            for (int resultSecond:arrSecond) {
+                if (resultFirst == resultSecond) {
+                    System.out.println(resultFirst);
+                }
+            }
+        }
