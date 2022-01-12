@@ -1,0 +1,30 @@
+// Automate the following for Kitabisa.com using any framework and language
+
+        System.setProperty("webdriver.edge.driver", "D:\\git.server\\SeleniumLearning\\edgedriver_win64_2\\msedgedriver.exe");
+        WebDriver driver = new EdgeDriver();
+
+        driver.manage().window().maximize();
+
+        driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+//launching the specified URL
+
+        driver.get("https://www.kitabisa.com/");
+        driver.findElement(By.xpath("//div/button[text()='Galang Dana Sekarang']")).click();
+        driver.findElement(By.xpath("//*[@id=\"template_horizontal-portrait-card-slider\"]/div[2]/div/a[1]/div")).click();
+        driver.findElement(By.xpath("//div/button[text()='Donasi sekarang!']")).click();
+
+        driver.findElement(By.xpath("//form/input")).sendKeys("10000");
+
+        driver.findElement(By.xpath("//div/button/span[text()='Lanjut pembayaran']")).click();
+
+        driver.findElement(By.xpath("//div/span[text()='Transfer BCA']")).click();
+
+        driver.findElement(By.xpath("//div/input[@placeholder='Nama Lengkap']")).sendKeys("Alfath Febriadi Pratama");
+        driver.findElement(By.xpath("//div/input[@placeholder='Nomor Ponsel atau Email']")).sendKeys("alfathfebriadi@gmail.com");
+
+        driver.findElement(By.xpath("//div/button/span[text()='Lanjut pembayaran']")).click();
+
+        driver.findElement(By.xpath("//div/button[text()='Donasi ke penggalangan lain']")).click();
+
